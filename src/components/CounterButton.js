@@ -1,4 +1,4 @@
-import React, { Component, /*PureComponent*/ } from 'react';
+import React, { Component } from 'react';
 
 class CounterButton extends Component {
     constructor() {
@@ -9,7 +9,7 @@ class CounterButton extends Component {
     }
 
     // Does not work with PureComponent!
-    
+    //
     shouldComponentUpdate(nextProps, nextState) {
         if (this.state.count !== nextState.count) {
             return true;
