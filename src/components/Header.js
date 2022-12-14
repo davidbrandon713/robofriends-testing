@@ -11,6 +11,7 @@ class Header extends Component {
         return (
             <div>
                 <h1 className='f1'>RoboFriends</h1>
+                <meta name="RoboFriends Redux" content="RoboFriends profile filtering app using React with Redux." />
                 <CounterButton color={'blue'} />
             </div>
         );
