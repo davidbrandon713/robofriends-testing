@@ -9,7 +9,7 @@ import './index.css';
 import App from './containers/App';
 import { searchRobots, requestRobots } from './reducers';
 import 'tachyons';
-import registerServiceWorker from './registerServiceWorker';
+import { register } from './serviceWorkerRegistration';
 
 const logger = createLogger();
 
@@ -24,4 +24,4 @@ root.render(
 
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-registerServiceWorker();
+register();
