@@ -9,7 +9,8 @@ import './index.css';
 import App from './containers/App';
 import { searchRobots, requestRobots } from './reducers';
 import 'tachyons';
-import { register } from './serviceWorkerRegistration';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
+// import reportWebVitals from './reportWebVitals'
 
 const logger = createLogger();
 
@@ -20,8 +21,10 @@ const root = createRoot(document.getElementById('root'));
 root.render(
     <Provider store={store}>
         <App />
-    </Provider>);
+    </Provider>
+);
 
+serviceWorkerRegistration.register();
 
 // ReactDOM.render(<App />, document.getElementById('root'));
-register();
+// reportWebVitals();
