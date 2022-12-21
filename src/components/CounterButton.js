@@ -10,7 +10,7 @@ class CounterButton extends Component {
 
     // Does not work with PureComponent!
     //
-    shouldComponentUpdate(nextProps, nextState) {
+    shouldComponentUpdate(nextState) {
         if (this.state.count !== nextState.count) {
             return true;
         }
@@ -25,9 +25,9 @@ class CounterButton extends Component {
     }
 
     render() {
-        console.log('CounterButton')
+        console.log('Render CounterButton')
         return(
-            <button color={this.props.color} onClick={this.updateCount}>Count: {this.state.count}</button>
+            <button id="counter" color={this.props.color} onClick={this.updateCount}>Count: {this.state.count}</button>
         );
     }
 }
